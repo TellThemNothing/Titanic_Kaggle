@@ -27,10 +27,6 @@ classifier = RandomForestClassifier(n_estimators=200, random_state=42)
 classifier.fit(X_train, y_train)
 y_pred = classifier.predict(X_test)
 
-# # print out some useless info
-# print(confusion_matrix(y_test, y_pred))
-# print(accuracy_score(y_test, y_pred))
-
 #run the test data
 df_test = pd.read_csv('test.csv')
 data = pd.DataFrame(df_test['PassengerId'])
